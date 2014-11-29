@@ -1,40 +1,51 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="viewport" content="width=640">
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>jQuery.parallax</title>
+	
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+	<!-- Force latest IE rendering engine & Chrome Frame -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<link rel="stylesheet" href="stylesheets/jquery.parallax.css" />
+	<style type="text/css" media="screen, projection">
+		@font-face { font-family: PreHistoric; src: url('fonts/prehistoric.ttf'); } 
+		#port {
+			background: #BD2427;
+			margin: 1.5em 0px;
+			overflow: hidden;
+			position: relative;
+			height: 800px;
+		}
+		body {
+			  background: #BD2427;
 
-    <link rel="stylesheet" href="stylesheets/core.css" media="screen">
-    <link rel="stylesheet" href="stylesheets/mobile.css" media="handheld, only screen and (max-device-width:640px)">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-
-    <script type="text/javascript" src="javascripts/modernizr.js"></script>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script type="text/javascript" src="javascripts/headsmart.min.js"></script>
-    <script type="text/javascript">
-      $(document).ready(function () {
-        $('#main_content').headsmart()
-      })
-    </script>
-    <title>FriendsofDCDino.org by DC-Dino-Friends</title>
-  </head>
-
-  <body>
-      <footer>
-        <span class="ribbon-outer">
-          <span class="ribbon-inner">
-            <p>this project by <a href="https://github.com/DC-Dino-Friends">DC-Dino-Friends</a> can be found on <a href="https://github.com/DC-Dino-Friends/friendsofdcdino.org">GitHub</a></p>
-          </span>
-          <span class="left-tail"></span>
-          <span class="right-tail"></span>
-        </span>
-        <p>Generated with <a href="http://pages.github.com">GitHub Pages</a> using Merlot</p>
-        <span class="octocat"></span>
-      </footer>
-
-    </div>
-
-    
-  </body>
+			}
+		h2 {
+			font-family: PreHistoric, sans-serif;
+			color: white;
+			font-size: 5em;
+		}
+	</style>
+</head>
+<body>
+	<h2>#dcdino</h2>
+	<div class="site_wrap wrap">
+		<div id="port">
+			<img class="parallax-layer" src="images/dc-dino-white.png" alt="" style="width:1200px; height:400px;"/>
+		</div>
+	</div>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.js"></script>
+	<script src="javascripts/jquery.parallax.js"></script>
+	<script type="text/javascript">
+	
+		jQuery(document).ready(function(){
+			// Declare parallax on layers
+			jQuery('.parallax-layer').parallax({
+				mouseport: jQuery("#port")
+			});
+		});
+	</script>
+</body>
 </html>
